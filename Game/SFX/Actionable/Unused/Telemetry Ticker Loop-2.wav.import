@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dyyackx70l6oj"
+path="res://.godot/imported/Telemetry Ticker Loop-2.wav-3b8d47b177f94364b4b93ef03bfa0eeb.sample"
+
+[deps]
+
+source_file="res://SFX/Actionable/Unused/Telemetry Ticker Loop-2.wav"
+dest_files=["res://.godot/imported/Telemetry Ticker Loop-2.wav-3b8d47b177f94364b4b93ef03bfa0eeb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

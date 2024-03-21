@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bo7wd40ut7umo"
+path="res://.godot/imported/Old Terminal Popup Appear Low.wav-ff0ef3cd43dd230d117ead3ea7ce4ef3.sample"
+
+[deps]
+
+source_file="res://SFX/Actionable/Unused/Old Terminal Popup Appear Low.wav"
+dest_files=["res://.godot/imported/Old Terminal Popup Appear Low.wav-ff0ef3cd43dd230d117ead3ea7ce4ef3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

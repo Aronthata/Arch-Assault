@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cob1shpsrrvho"
+path="res://.godot/imported/PC Keyboard_Keystroke_28.wav-f48e319ce0135b6ef9a5f48567b39640.sample"
+
+[deps]
+
+source_file="res://SFX/Actionable/Unused/PC Keyboard_Keystroke_28.wav"
+dest_files=["res://.godot/imported/PC Keyboard_Keystroke_28.wav-f48e319ce0135b6ef9a5f48567b39640.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

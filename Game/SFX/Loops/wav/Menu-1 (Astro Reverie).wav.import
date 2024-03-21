@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cceqxgpo65yo8"
+path="res://.godot/imported/Menu-1 (Astro Reverie).wav-dba925290b5b3baacb61bb17c7495bcf.sample"
+
+[deps]
+
+source_file="res://SFX/Loops/wav/Menu-1 (Astro Reverie).wav"
+dest_files=["res://.godot/imported/Menu-1 (Astro Reverie).wav-dba925290b5b3baacb61bb17c7495bcf.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

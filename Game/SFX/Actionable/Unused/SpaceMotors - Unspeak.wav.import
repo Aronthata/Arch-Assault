@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://6it82uk7g0eo"
+path="res://.godot/imported/SpaceMotors - Unspeak.wav-43ce027beba5d74d6468db6104b92552.sample"
+
+[deps]
+
+source_file="res://SFX/Actionable/Unused/SpaceMotors - Unspeak.wav"
+dest_files=["res://.godot/imported/SpaceMotors - Unspeak.wav-43ce027beba5d74d6468db6104b92552.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
