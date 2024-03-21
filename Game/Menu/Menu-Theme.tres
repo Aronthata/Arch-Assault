@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://db5n08r57uv8w"]
+
+[ext_resource type="FontFile" uid="uid://dlj6fgfy5gs4p" path="res://UI/Fonts/bigmacca.ttf" id="1_6c48h"]
+
+[resource]
+default_font_size = 0
+Button/font_sizes/font_size = 32
+Label/font_sizes/font_size = 46
+Label/fonts/font = ExtResource("1_6c48h")
