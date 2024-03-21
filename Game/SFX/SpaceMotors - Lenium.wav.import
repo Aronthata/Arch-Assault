@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cwpwlm50vqumm"
+path="res://.godot/imported/SpaceMotors - Lenium.wav-808bae73848971e70f8b2e040a37de2e.sample"
+
+[deps]
+
+source_file="res://SFX/SpaceMotors - Lenium.wav"
+dest_files=["res://.godot/imported/SpaceMotors - Lenium.wav-808bae73848971e70f8b2e040a37de2e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

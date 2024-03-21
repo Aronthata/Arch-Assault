@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d3dv42j01pcr"
+path="res://.godot/imported/3 - Lunar Serenity (Loop).wav-b73c53dae468578327e6bad62f8eddc0.sample"
+
+[deps]
+
+source_file="res://SFX/Loops/wav/3 - Lunar Serenity (Loop).wav"
+dest_files=["res://.godot/imported/3 - Lunar Serenity (Loop).wav-b73c53dae468578327e6bad62f8eddc0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

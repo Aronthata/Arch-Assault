@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bs3gudxecgo63"
+path="res://.godot/imported/SpaceMotors - Kipper.wav-b454fbbd628a4deb99b80929563a482d.sample"
+
+[deps]
+
+source_file="res://SFX/SpaceMotors - Kipper.wav"
+dest_files=["res://.godot/imported/SpaceMotors - Kipper.wav-b454fbbd628a4deb99b80929563a482d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
