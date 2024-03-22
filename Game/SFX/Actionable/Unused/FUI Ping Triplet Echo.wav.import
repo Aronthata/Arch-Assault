@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/FUI Ping Triplet Echo.wav-f530b122a7780ab2e68
 [params]
 
 force/8_bit=false
-force/mono=false
+force/mono=true
 force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=true

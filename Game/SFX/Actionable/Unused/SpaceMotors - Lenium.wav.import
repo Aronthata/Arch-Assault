@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/SpaceMotors - Lenium.wav-a16b67e0b78f412cc4bd
 [params]
 
 force/8_bit=false
-force/mono=false
+force/mono=true
 force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=true

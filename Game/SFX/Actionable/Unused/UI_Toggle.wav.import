@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/UI_Toggle.wav-5cb2c4146fec245c911d5ada5b61089
 [params]
 
 force/8_bit=false
-force/mono=false
+force/mono=true
 force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=true

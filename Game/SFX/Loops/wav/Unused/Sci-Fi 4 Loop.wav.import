@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/Sci-Fi 4 Loop.wav-77b641b5b0adf6397617ab6de6c
 [params]
 
 force/8_bit=false
-force/mono=false
+force/mono=true
 force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=true

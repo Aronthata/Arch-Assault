@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/PUNCH_ELECTRIC_HEAVY_02.wav-8eeeb0d23ad1ee6bd
 [params]
 
 force/8_bit=false
-force/mono=false
+force/mono=true
 force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=true

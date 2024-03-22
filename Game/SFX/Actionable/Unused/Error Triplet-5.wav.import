@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/Error Triplet-5.wav-f6ef35ac2b820491a80422599
 [params]
 
 force/8_bit=false
-force/mono=false
+force/mono=true
 force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=true
