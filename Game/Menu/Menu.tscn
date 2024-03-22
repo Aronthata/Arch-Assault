@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c365i82obnqr3"]
+[gd_scene load_steps=18 format=3 uid="uid://c365i82obnqr3"]
 
 [ext_resource type="Script" path="res://addons/Extend/GUIParent.gd" id="1_dr85h"]
 [ext_resource type="AudioStream" uid="uid://cceqxgpo65yo8" path="res://SFX/Loops/wav/Menu-1 (Astro Reverie).wav" id="1_e8ldl"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://cuic4fo4d3ce5" path="res://SFX/Loops/wav/Menu-4.wav" id="4_ei4fy"]
 [ext_resource type="AudioStream" uid="uid://bf4jx3sjm316d" path="res://SFX/Loops/wav/Menu-5.wav" id="5_0md8x"]
 [ext_resource type="AudioStream" uid="uid://6k6774dy5s5n" path="res://SFX/Loops/wav/Menu-6.wav" id="6_unhgu"]
+[ext_resource type="Script" path="res://Menu/Menu.gd" id="8_kmjoe"]
 [ext_resource type="Theme" uid="uid://db5n08r57uv8w" path="res://Menu/Menu-Theme.tres" id="8_p7hy7"]
 [ext_resource type="Texture2D" uid="uid://cpdl2lidum3qj" path="res://UI/ButtonTextures/Button15.png" id="9_xctri"]
 [ext_resource type="Texture2D" uid="uid://raiw1iybm3rx" path="res://UI/ButtonTextures/Button16.png" id="10_8va80"]
@@ -47,7 +48,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dr85h")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="BackgroundSFX" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="BackgroundSFX"]
+stream = SubResource("AudioStreamRandomizer_8qjxt")
+autoplay = true
+mix_target = 2
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="BackgroundSFX"]
 stream = SubResource("AudioStreamRandomizer_8qjxt")
 autoplay = true
 mix_target = 2
@@ -72,6 +80,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("8_kmjoe")
 
 [node name="MarginContainer" type="MarginContainer" parent="AspectRatioContainer"]
 use_parent_material = true
@@ -82,15 +91,15 @@ use_parent_material = true
 layout_mode = 2
 
 [node name="MainBox" type="VBoxContainer" parent="AspectRatioContainer/MarginContainer/CenterContainer"]
-use_parent_material = true
 layout_mode = 2
+theme_override_constants/separation = 50
 
 [node name="Label" type="Label" parent="AspectRatioContainer/MarginContainer/CenterContainer/MainBox"]
 use_parent_material = true
 custom_minimum_size = Vector2(1, 1)
 layout_mode = 2
 theme = ExtResource("8_p7hy7")
-theme_override_font_sizes/font_size = 46
+theme_override_font_sizes/font_size = 64
 text = "Arch Assault"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -99,11 +108,12 @@ autowrap_mode = 2
 [node name="Buttons" type="VBoxContainer" parent="AspectRatioContainer/MarginContainer/CenterContainer/MainBox"]
 use_parent_material = true
 layout_mode = 2
+theme_override_constants/separation = 12
 
 [node name="Button" type="Button" parent="AspectRatioContainer/MarginContainer/CenterContainer/MainBox/Buttons"]
 layout_mode = 2
 theme = ExtResource("8_p7hy7")
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxTexture_jlf4g")
 theme_override_styles/hover = SubResource("StyleBoxTexture_5rqjq")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_8ntbd")
@@ -112,7 +122,7 @@ text = "Campagin"
 [node name="Button2" type="Button" parent="AspectRatioContainer/MarginContainer/CenterContainer/MainBox/Buttons"]
 layout_mode = 2
 theme = ExtResource("8_p7hy7")
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxTexture_jlf4g")
 theme_override_styles/hover = SubResource("StyleBoxTexture_5rqjq")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_8ntbd")
@@ -121,7 +131,7 @@ text = "Multiplayer"
 [node name="Button3" type="Button" parent="AspectRatioContainer/MarginContainer/CenterContainer/MainBox/Buttons"]
 layout_mode = 2
 theme = ExtResource("8_p7hy7")
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxTexture_jlf4g")
 theme_override_styles/hover = SubResource("StyleBoxTexture_5rqjq")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_8ntbd")
@@ -130,7 +140,7 @@ text = "Settings"
 [node name="Button4" type="Button" parent="AspectRatioContainer/MarginContainer/CenterContainer/MainBox/Buttons"]
 layout_mode = 2
 theme = ExtResource("8_p7hy7")
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxTexture_jlf4g")
 theme_override_styles/hover = SubResource("StyleBoxTexture_5rqjq")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_8ntbd")
@@ -167,3 +177,6 @@ grow_vertical = 2
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Control/CenterContainer"]
 custom_minimum_size = Vector2(800, 500)
 layout_mode = 2
+
+[connection signal="finished" from="BackgroundSFX/AudioStreamPlayer" to="AspectRatioContainer" method="_on_audio_stream_player_finished"]
+[connection signal="finished" from="BackgroundSFX/AudioStreamPlayer2" to="AspectRatioContainer" method="_on_audio_stream_player_finished"]

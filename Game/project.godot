@@ -12,17 +12,23 @@ config_version=5
 
 config/name="Arch-Assault"
 run/main_scene="res://Menu/Menu.tscn"
+config/use_custom_user_dir=true
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Extend="*res://addons/Extend/Extend.gd"
+Global="*res://Script/Global.gd"
 
 [display]
 
 window/size/viewport_width=1600
 window/size/viewport_height=900
+
+[global]
+
+text_Resize=1
 
 [importer_defaults]
 
@@ -30,11 +36,11 @@ wav={
 "compress/mode": 0,
 "edit/loop_begin": 0,
 "edit/loop_end": -1,
-"edit/loop_mode": 2,
+"edit/loop_mode": 1,
 "edit/normalize": true,
 "edit/trim": true,
 "force/8_bit": false,
 "force/max_rate": false,
 "force/max_rate_hz": 44100,
-"force/mono": false
+"force/mono": true
 }
