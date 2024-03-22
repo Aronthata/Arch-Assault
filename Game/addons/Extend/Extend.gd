@@ -14,14 +14,6 @@ func change_scene(path: String) -> void:
 	get_tree().set_current_scene(current_scene)
 	
 
-func FontResize(Nodes: Array[Control], FontSizes: Array):
-	var viewportSize = get_viewport().size
-	var newSize = Vector2(1600, 900)
-	for I in Nodes.size():
-		if Nodes[I] is Label or Nodes[I] is BaseButton or Nodes[I] is LineEdit:
-			var originalFontSize = FontSizes[I]
-			var newFontSize = (viewportSize.x/newSize.x) * originalFontSize
-			Nodes[I]["theme_override_font_sizes/font_size"] = newFontSize
 
 
 func get_all_Children(root_node):

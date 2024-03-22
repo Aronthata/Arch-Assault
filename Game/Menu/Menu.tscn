@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c365i82obnqr3"]
+[gd_scene load_steps=19 format=3 uid="uid://c365i82obnqr3"]
 
 [ext_resource type="Script" path="res://addons/Extend/GUIParent.gd" id="1_dr85h"]
 [ext_resource type="AudioStream" uid="uid://cceqxgpo65yo8" path="res://SFX/Loops/wav/Menu-1 (Astro Reverie).wav" id="1_e8ldl"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cpdl2lidum3qj" path="res://UI/ButtonTextures/Button15.png" id="9_xctri"]
 [ext_resource type="Texture2D" uid="uid://raiw1iybm3rx" path="res://UI/ButtonTextures/Button16.png" id="10_8va80"]
 [ext_resource type="Texture2D" uid="uid://d1e8sv6x1gd" path="res://UI/ButtonTextures/Button11.png" id="11_tam57"]
+[ext_resource type="Script" path="res://Menu/Settings.gd" id="13_pdpu2"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_8qjxt"]
 streams_count = 6
@@ -51,11 +52,6 @@ script = ExtResource("1_dr85h")
 [node name="BackgroundSFX" type="Node" parent="."]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="BackgroundSFX"]
-stream = SubResource("AudioStreamRandomizer_8qjxt")
-autoplay = true
-mix_target = 2
-
-[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="BackgroundSFX"]
 stream = SubResource("AudioStreamRandomizer_8qjxt")
 autoplay = true
 mix_target = 2
@@ -128,7 +124,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_5rqjq")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_8ntbd")
 text = "Multiplayer"
 
-[node name="Button3" type="Button" parent="AspectRatioContainer/MarginContainer/CenterContainer/MainBox/Buttons"]
+[node name="Settings" type="Button" parent="AspectRatioContainer/MarginContainer/CenterContainer/MainBox/Buttons"]
 layout_mode = 2
 theme = ExtResource("8_p7hy7")
 theme_override_font_sizes/font_size = 48
@@ -137,7 +133,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_5rqjq")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_8ntbd")
 text = "Settings"
 
-[node name="Button4" type="Button" parent="AspectRatioContainer/MarginContainer/CenterContainer/MainBox/Buttons"]
+[node name="Quit" type="Button" parent="AspectRatioContainer/MarginContainer/CenterContainer/MainBox/Buttons"]
 layout_mode = 2
 theme = ExtResource("8_p7hy7")
 theme_override_font_sizes/font_size = 48
@@ -147,7 +143,6 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_8ntbd")
 text = "Quit"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="TextureRect" type="ColorRect" parent="CanvasLayer"]
 show_behind_parent = true
@@ -158,25 +153,95 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.784314)
 
-[node name="Control" type="Control" parent="CanvasLayer"]
+[node name="Settings" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("13_pdpu2")
 
-[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control"]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="CanvasLayer/Settings"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+ratio = 3.0
 
-[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Control/CenterContainer"]
-custom_minimum_size = Vector2(800, 500)
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="CanvasLayer/Settings/AspectRatioContainer"]
+layout_mode = 2
+ratio = 2.0
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Settings/AspectRatioContainer/AspectRatioContainer"]
 layout_mode = 2
 
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Settings/AspectRatioContainer/AspectRatioContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Settings/AspectRatioContainer/AspectRatioContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Settings/AspectRatioContainer/AspectRatioContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Settings/AspectRatioContainer/AspectRatioContainer/PanelContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Settings/AspectRatioContainer/AspectRatioContainer/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Settings/AspectRatioContainer/AspectRatioContainer/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 26
+text = "Text Resize:"
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/Settings/AspectRatioContainer/AspectRatioContainer/PanelContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+item_count = 4
+selected = 0
+popup/item_0/text = "Disabled"
+popup/item_0/id = 0
+popup/item_1/text = "Align Width"
+popup/item_1/id = 1
+popup/item_2/text = "Align Height"
+popup/item_2/id = 2
+popup/item_3/text = "Align Nearest"
+popup/item_3/id = 3
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="CanvasLayer/Settings/AspectRatioContainer/AspectRatioContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+ratio = 23.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Settings/AspectRatioContainer/AspectRatioContainer/PanelContainer/VBoxContainer/AspectRatioContainer"]
+layout_mode = 2
+
+[node name="Exit" type="Button" parent="CanvasLayer/Settings/AspectRatioContainer/AspectRatioContainer/PanelContainer/VBoxContainer/AspectRatioContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Exit
+"
+
+[node name="Apply" type="Button" parent="CanvasLayer/Settings/AspectRatioContainer/AspectRatioContainer/PanelContainer/VBoxContainer/AspectRatioContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_font_sizes/font_size = 24
+text = "Apply"
+
 [connection signal="finished" from="BackgroundSFX/AudioStreamPlayer" to="AspectRatioContainer" method="_on_audio_stream_player_finished"]
-[connection signal="finished" from="BackgroundSFX/AudioStreamPlayer2" to="AspectRatioContainer" method="_on_audio_stream_player_finished"]
+[connection signal="pressed" from="AspectRatioContainer/MarginContainer/CenterContainer/MainBox/Buttons/Settings" to="CanvasLayer/Settings" method="_on_settings_pressed"]
+[connection signal="pressed" from="AspectRatioContainer/MarginContainer/CenterContainer/MainBox/Buttons/Quit" to="AspectRatioContainer" method="_on_quit_pressed"]
+[connection signal="pressed" from="CanvasLayer/Settings/AspectRatioContainer/AspectRatioContainer/PanelContainer/VBoxContainer/AspectRatioContainer/HBoxContainer2/Exit" to="CanvasLayer/Settings" method="_on_exit_pressed"]
+[connection signal="pressed" from="CanvasLayer/Settings/AspectRatioContainer/AspectRatioContainer/PanelContainer/VBoxContainer/AspectRatioContainer/HBoxContainer2/Apply" to="CanvasLayer/Settings" method="_on_apply_pressed"]

@@ -16,10 +16,26 @@ func _ready():
 	for I in FontBasedNodes:
 		FontSizeArray.append(I["theme_override_font_sizes/font_size"])
 	get_tree().get_root().size_changed.connect(FontWork)
-	Extend.FontResize(FontBasedNodes, FontSizeArray)
+	FontResize(FontBasedNodes, FontSizeArray)
 func FontWork():
-	Extend.FontResize(FontBasedNodes, FontSizeArray)
-
-
-
-
+	FontResize(FontBasedNodes, FontSizeArray)
+func FontResize(Nodes: Array[Control], FontSizes: Array):
+	if ProjectSettings.get_setting("global/text_Resize") != 0:
+		var viewportSize = get_viewport().size
+		var newSize = Vector2(1600, 900)
+		for I in Nodes.size():
+			if Nodes[I] is Label or Nodes[I] is BaseButton or Nodes[I] is LineEdit:
+				var originalFontSize = FontSizes[I]
+				var Formula: float
+				if ProjectSettings.get_setting("global/text_Resize") == 1:
+					Formula = viewportSize.x/newSize.x
+				elif ProjectSettings.get_setting("global/text_Resize") == 2:
+					Formula = viewportSize.y/newSize.y
+				elif ProjectSettings.get_setting("global/text_Resize") == 3:
+					if viewportSize.x <= viewportSize.y:
+						Formula = viewportSize.x/newSize.x
+					else:
+						viewportSize.y/newSize.y
+				print(Formula)
+				print(originalFontSize)
+				Nodes[I]["theme_override_font_sizes/font_size"] = Formula * originalFontSize
