@@ -15,8 +15,3 @@ func Set_Get_Settings():
 		ProjectSettings.set_setting("global/text_Resize", Config.get_value("Global", "text_Resize"))
 	DirAccess.make_dir_absolute("user://"+"Arch_Run")
 	Config.save("user://"+"Arch_Run"+"/"+"Settings.cfg")
-
-
-
-func _process(delta):
-	pass
