@@ -3,6 +3,21 @@
 [ext_resource type="Script" path="res://Splash Screen.gd" id="1_75niq"]
 [ext_resource type="Texture2D" uid="uid://bg7i7xxy5xvxw" path="res://Jinx-logo.svg" id="1_76yfp"]
 
+[sub_resource type="Animation" id="Animation_wjkc3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_35a0e"]
 resource_name = "Startup"
 length = 10.0
@@ -33,21 +48,6 @@ tracks/1/keys = {
 }]
 }
 
-[sub_resource type="Animation" id="Animation_wjkc3"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PanelContainer:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6jtk2"]
 _data = {
 "RESET": SubResource("Animation_wjkc3"),
@@ -64,7 +64,6 @@ grow_vertical = 2
 script = ExtResource("1_75niq")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
-modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

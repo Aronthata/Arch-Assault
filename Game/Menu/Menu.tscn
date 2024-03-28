@@ -143,6 +143,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_8ntbd")
 text = "Quit"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="TextureRect" type="ColorRect" parent="CanvasLayer"]
 show_behind_parent = true
