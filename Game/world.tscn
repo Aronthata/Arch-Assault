@@ -15,10 +15,10 @@ sky = SubResource("Sky_fgnx8")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="QuadMesh" id="QuadMesh_hsjxy"]
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_ndvan"]
 size = Vector3(1, 1, 0.505005)
+
+[sub_resource type="QuadMesh" id="QuadMesh_hsjxy"]
 
 [node name="World" type="Node3D"]
 
@@ -29,15 +29,16 @@ environment = SubResource("Environment_oi7fq")
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 shadow_enabled = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="testplayer" parent="." instance=ExtResource("1_mx4pr")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.91307, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(6, 0, 0, 0, -2.62268e-07, 6, 0, -6, -2.62268e-07, 0, 0, 0)
-mesh = SubResource("QuadMesh_hsjxy")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.247498)
 shape = SubResource("BoxShape3D_ndvan")
 
-[node name="testplayer" parent="." instance=ExtResource("1_mx4pr")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.91307, 0)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("QuadMesh_hsjxy")
+skeleton = NodePath("../..")

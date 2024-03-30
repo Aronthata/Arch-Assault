@@ -106,7 +106,7 @@ use_parent_material = true
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="Button" type="Button" parent="AspectRatioContainer/MarginContainer/CenterContainer/MainBox/Buttons"]
+[node name="Campain" type="Button" parent="AspectRatioContainer/MarginContainer/CenterContainer/MainBox/Buttons"]
 layout_mode = 2
 theme = ExtResource("8_p7hy7")
 theme_override_font_sizes/font_size = 48
@@ -115,7 +115,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_5rqjq")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_8ntbd")
 text = "Campagin"
 
-[node name="Button2" type="Button" parent="AspectRatioContainer/MarginContainer/CenterContainer/MainBox/Buttons"]
+[node name="Multiplayer" type="Button" parent="AspectRatioContainer/MarginContainer/CenterContainer/MainBox/Buttons"]
 layout_mode = 2
 theme = ExtResource("8_p7hy7")
 theme_override_font_sizes/font_size = 48
