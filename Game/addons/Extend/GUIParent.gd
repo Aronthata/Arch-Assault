@@ -39,3 +39,6 @@ func FontResize(Nodes: Array[Control], FontSizes: Array):
 				print(Formula)
 				print(originalFontSize)
 				Nodes[I]["theme_override_font_sizes/font_size"] = Formula * originalFontSize
+
+
+

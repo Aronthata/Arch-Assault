@@ -242,6 +242,7 @@ theme_override_font_sizes/font_size = 24
 text = "Apply"
 
 [connection signal="finished" from="BackgroundSFX/AudioStreamPlayer" to="AspectRatioContainer" method="_on_audio_stream_player_finished"]
+[connection signal="pressed" from="AspectRatioContainer/MarginContainer/CenterContainer/MainBox/Buttons/Multiplayer" to="AspectRatioContainer" method="_on_multiplayer_pressed"]
 [connection signal="pressed" from="AspectRatioContainer/MarginContainer/CenterContainer/MainBox/Buttons/Settings" to="CanvasLayer/Settings" method="_on_settings_pressed"]
 [connection signal="pressed" from="AspectRatioContainer/MarginContainer/CenterContainer/MainBox/Buttons/Quit" to="AspectRatioContainer" method="_on_quit_pressed"]
 [connection signal="pressed" from="CanvasLayer/Settings/AspectRatioContainer/AspectRatioContainer/PanelContainer/VBoxContainer/AspectRatioContainer/HBoxContainer2/Exit" to="CanvasLayer/Settings" method="_on_exit_pressed"]

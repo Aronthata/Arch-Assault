@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=3 uid="uid://big2lpjt3vn6j"]
+
+[ext_resource type="Script" path="res://MultiPlayer.gd" id="1_xkopa"]
+
+[node name="MultiPlayer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xkopa")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.85098, 0.282353, 0.333333, 1)
+
+[node name="Host" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.42
+anchor_top = 0.133
+anchor_right = 0.58
+anchor_bottom = 0.234
+offset_left = -8.0
+offset_top = 136.3
+offset_right = -8.00006
+offset_bottom = 136.4
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
+text = "Host
+"
+
+[node name="Join" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.42
+anchor_top = 0.302
+anchor_right = 0.58
+anchor_bottom = 0.409
+offset_left = -8.0
+offset_top = 120.2
+offset_right = -6.10352e-05
+offset_bottom = 114.9
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
+text = "Join"
+
+[node name="Back" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 597.0
+offset_bottom = 141.0
+theme_override_font_sizes/font_size = 50
+text = "Return To Main Menu
+"
+
+[connection signal="pressed" from="ColorRect/Back" to="." method="_on_back_pressed"]
