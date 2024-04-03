@@ -1,10 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://b2nnwojcrfmfi"]
+[gd_scene load_steps=5 format=3 uid="uid://b2nnwojcrfmfi"]
 
 [ext_resource type="Script" path="res://testplayer.gd" id="1_yhd8j"]
 [ext_resource type="ArrayMesh" uid="uid://davr0nvk636sw" path="res://Blend-Files/textures/textures/test player_Cube.res" id="2_hccqs"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_j7iy0"]
 size = Vector3(1.99219, 2.78752, 1.99976)
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_7tfft"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:rotation")
+properties/1/spawn = true
+properties/1/replication_mode = 1
 
 [node name="testplayer" type="CharacterBody3D"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
@@ -19,3 +27,6 @@ mesh = ExtResource("2_hccqs")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1.02901)
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_7tfft")
