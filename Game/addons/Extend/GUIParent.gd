@@ -36,8 +36,6 @@ func FontResize(Nodes: Array[Control], FontSizes: Array):
 						Formula = viewportSize.x/newSize.x
 					else:
 						viewportSize.y/newSize.y
-				print(Formula)
-				print(originalFontSize)
 				Nodes[I]["theme_override_font_sizes/font_size"] = Formula * originalFontSize
 
 

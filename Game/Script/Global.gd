@@ -1,14 +1,14 @@
 extends Node
-var Config: ConfigFile
+var Config = ConfigFile.new()
 
 
 func _ready():
-	Config = ConfigFile.new()
-	Config.load("user://"+"Arch_Run"+"/"+"Settings.cfg")
-	if Config == null:
+	DirAccess.make_dir_absolute("user://"+"Arch_Run")
+	var err = Config.load("user://scores.cfg")
+	if err != OK:
+		print("works?")
 		Config = ConfigFile.new()
-		DirAccess.make_dir_absolute("user://"+"Arch_Run")
-		Apply_Settings()
+		Apply_Settings(1)
 	else:
 		Set_Settings()
 func Set_Settings():
