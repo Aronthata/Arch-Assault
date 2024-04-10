@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bg7i7xxy5xvxw"
-path="res://.godot/imported/Jinx-logo.svg-d21226d915b77b65c216225ea856c67b.ctex"
+uid="uid://ba2yrk6p46jgj"
+path="res://.godot/imported/Jinx-Logo-2.svg-b16f84eb17db1fb0a36b06f5e889ff04.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Jinx-logo.svg"
-dest_files=["res://.godot/imported/Jinx-logo.svg-d21226d915b77b65c216225ea856c67b.ctex"]
+source_file="res://Jinx-Logo-2.svg"
+dest_files=["res://.godot/imported/Jinx-Logo-2.svg-b16f84eb17db1fb0a36b06f5e889ff04.ctex"]
 
 [params]
 
