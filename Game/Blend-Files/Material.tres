@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://camd462jn08ks"]
+
+[ext_resource type="Texture2D" uid="uid://ekfuvmtl6fq5" path="res://Blend-Files/Scavanger_ImphenziaPalette01.png" id="1_yykfw"]
+[ext_resource type="Texture2D" uid="uid://o8thc1ecoros" path="res://Blend-Files/Scavanger_ImphenziaPalette01_1.png" id="2_rmdps"]
+
+[resource]
+resource_name = "Material"
+cull_mode = 2
+albedo_texture = ExtResource("1_yykfw")
+metallic_texture = ExtResource("2_rmdps")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_rmdps")
+roughness_texture_channel = 1
+texture_filter = 2
