@@ -6,7 +6,6 @@ func _ready():
 	DirAccess.make_dir_absolute("user://"+"Arch_Run")
 	var err = Config.load("user://scores.cfg")
 	if err != OK:
-		print("works?")
 		Config = ConfigFile.new()
 		Apply_Settings(1)
 	else:
