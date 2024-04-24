@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b2nnwojcrfmfi"]
 
-[ext_resource type="Script" path="res://testplayer.gd" id="1_yhd8j"]
+[ext_resource type="Script" path="res://StateMachine'/StateMachine.gd" id="1_lb03a"]
 [ext_resource type="ArrayMesh" uid="uid://davr0nvk636sw" path="res://Blend-Files/textures/textures/test player_Cube.res" id="2_hccqs"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_j7iy0"]
@@ -16,7 +16,7 @@ properties/1/replication_mode = 1
 
 [node name="testplayer" type="CharacterBody3D"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
-script = ExtResource("1_yhd8j")
+script = ExtResource("1_lb03a")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0124512, -0.406174, 0.00283647)
