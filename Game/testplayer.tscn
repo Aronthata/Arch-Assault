@@ -1,6 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://b2nnwojcrfmfi"]
 
+<<<<<<< HEAD
 [ext_resource type="Script" path="res://StateMachine'/StateMachine.gd" id="1_8nsyg"]
+=======
+[ext_resource type="Script" path="res://StateMachine'/StateMachine.gd" id="1_lb03a"]
+>>>>>>> 95ee680a90fcaff8399f8fa4e3ef4f8c616ae4a2
 [ext_resource type="ArrayMesh" uid="uid://davr0nvk636sw" path="res://Blend-Files/textures/textures/test player_Cube.res" id="2_hccqs"]
 [ext_resource type="Script" path="res://StateMachine'/States/Idle.gd" id="2_wxsi2"]
 [ext_resource type="Script" path="res://StateMachine'/States/Run.gd" id="3_jm3ka"]
@@ -26,8 +30,12 @@ properties/1/replication_mode = 1
 
 [node name="testplayer" type="CharacterBody3D"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+<<<<<<< HEAD
 script = ExtResource("1_8nsyg")
 States = Array[Resource("res://StateMachine'/States/Templates/Base_State.gd")]([SubResource("Resource_jc6hv"), SubResource("Resource_47h1c")])
+=======
+script = ExtResource("1_lb03a")
+>>>>>>> 95ee680a90fcaff8399f8fa4e3ef4f8c616ae4a2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0124512, -0.406174, 0.00283647)
