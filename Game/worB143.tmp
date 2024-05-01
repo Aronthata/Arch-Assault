@@ -23,5 +23,3 @@ skeleton = NodePath("../..")
 
 [node name="CPlayer" parent="." instance=ExtResource("1_yjx2j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23421, 0)
-States = null
-Start_state = null

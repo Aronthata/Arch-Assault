@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://4ceg7mersqfe"]
+
+[ext_resource type="Script" path="res://StateMachine'/StateMachine.gd" id="1_hn8xt"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_cfcgm"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_omp8x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0j5vg"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3glxf"]
+
+[node name="CPlayer" type="CharacterBody3D"]
+script = ExtResource("1_hn8xt")
+States = null
+Start_state = null
+
+[node name="body" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_cfcgm")
+
+[node name="head" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.416054, 0.186523)
+mesh = SubResource("SphereMesh_omp8x")
+skeleton = NodePath("../body")
+surface_material_override/0 = SubResource("StandardMaterial3D_0j5vg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_3glxf")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, -1.77636e-15, 8.74228e-08, 2.25412e-08, 0.966187, 0.257841, -8.44668e-08, 0.257841, -0.966187, 0, 0.431247, 0)

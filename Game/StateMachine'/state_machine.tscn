@@ -1,24 +1,20 @@
-[gd_scene load_steps=8 format=3 uid="uid://dtkl6g8j5cbjw"]
+[gd_scene load_steps=6 format=3 uid="uid://dtkl6g8j5cbjw"]
 
 [ext_resource type="Script" path="res://StateMachine'/StateMachine.gd" id="1_wsx4g"]
-[ext_resource type="Script" path="res://StateMachine'/States/Templates/Base_State.gd" id="2_s6wrx"]
 [ext_resource type="Script" path="res://StateMachine'/States/Idle.gd" id="2_wavob"]
 [ext_resource type="Script" path="res://StateMachine'/States/Run.gd" id="3_a7tv5"]
 
-[sub_resource type="Resource" id="Resource_8x4l7"]
-script = ExtResource("2_s6wrx")
+[sub_resource type="Resource" id="Resource_76kg8"]
+script = ExtResource("2_wavob")
 Animation_Name = ""
 
 [sub_resource type="Resource" id="Resource_qg2lp"]
 script = ExtResource("3_a7tv5")
 Animation_Name = ""
 
-[sub_resource type="Resource" id="Resource_uhekb"]
-script = ExtResource("2_wavob")
-Animation_Name = ""
-
 [node name="StateMachine" type="Node3D"]
 script = ExtResource("1_wsx4g")
-States = Array[ExtResource("2_s6wrx")]([SubResource("Resource_8x4l7"), SubResource("Resource_qg2lp"), SubResource("Resource_uhekb")])
+States = Array[Resource("res://StateMachine'/States/Templates/Base_State.gd")]([SubResource("Resource_76kg8"), SubResource("Resource_qg2lp")])
+Start_state = null
 
 [node name="Node3D" type="Node3D" parent="."]
