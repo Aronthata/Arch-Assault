@@ -1,6 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://4ceg7mersqfe"]
+[gd_scene load_steps=10 format=3 uid="uid://4ceg7mersqfe"]
 
 [ext_resource type="Script" path="res://StateMachine'/StateMachine.gd" id="1_hn8xt"]
+[ext_resource type="Script" path="res://StateMachine'/States/Idle.gd" id="2_4m5we"]
+[ext_resource type="Script" path="res://StateMachine'/States/Run.gd" id="3_aayj6"]
+
+[sub_resource type="Resource" id="Resource_uacus"]
+script = ExtResource("2_4m5we")
+Animation_Name = ""
+
+[sub_resource type="Resource" id="Resource_4vmp8"]
+script = ExtResource("3_aayj6")
+Animation_Name = ""
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_cfcgm"]
 
@@ -13,8 +23,7 @@ albedo_color = Color(0, 0, 0, 1)
 
 [node name="CPlayer" type="CharacterBody3D"]
 script = ExtResource("1_hn8xt")
-States = null
-Start_state = null
+States = Array[Resource("res://StateMachine'/States/Templates/Base_State.gd")]([SubResource("Resource_uacus"), SubResource("Resource_4vmp8")])
 
 [node name="body" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_cfcgm")

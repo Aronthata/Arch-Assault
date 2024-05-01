@@ -4,7 +4,7 @@ class_name Base_State
 var State_Machine: StateMachine
 func State_Enter():
 	pass
-func State_Update():
+func State_Update(INPUT:Vector3):
 	pass
 func State_Exit():
 	pass
